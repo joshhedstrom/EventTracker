@@ -15,13 +15,11 @@ public class AttendeeController {
 
 	@RequestMapping(value = "/attendee", method = RequestMethod.GET)
 	public String displayAttendeePage(Model model) {
-
 		Attendee attendee = new Attendee();
 
 		model.addAttribute("attendee", attendee);
 
 		return "attendee";
-
 	}
 
 	@RequestMapping(value = "/attendee", method = RequestMethod.POST)

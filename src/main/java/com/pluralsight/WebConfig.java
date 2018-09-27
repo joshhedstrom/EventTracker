@@ -25,15 +25,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 	public MessageSource messageSource() {
 		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
 		messageSource.setBasename("messages");
-
 		return messageSource;
 	}
 
 	@Bean
-	LocaleResolver localeResolver() {
+	public LocaleResolver localeResolver() {
 		SessionLocaleResolver resolver = new SessionLocaleResolver();
 		resolver.setDefaultLocale(Locale.ENGLISH);
-
 		return resolver;
 	}
 
