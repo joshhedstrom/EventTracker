@@ -1,8 +1,13 @@
 package com.pluralsight.model;
 
+import javax.validation.constraints.Size;
+
 public class Attendee {
 
+	@Size(min=2, max=30)
 	private String name;
+	
+//	@NotNull @Email
 	private String emailAddress;
 
 	public String getName() {
